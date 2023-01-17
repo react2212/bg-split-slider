@@ -1,3 +1,4 @@
+const header = document.querySelector('header');
 const frame = document.querySelector('.frame');
 const bgs = frame.querySelectorAll('.bg');
 const lines = frame.querySelectorAll('.line');
@@ -10,6 +11,7 @@ insertDivs(0.05);
 insertLine();
 
 setTimeout(() => boxs[0].classList.add('on'), changeDelay);
+setTimeout(() => header.classList.add('on'), 4000);
 
 btns.forEach((btn, idx) => {
 	btn.addEventListener('click', (e) => {
