@@ -90,6 +90,65 @@ figure {
 					transform: translateX(-100%);
 					transition: 0.5s 0s;
 				}
+
+				.bar {
+					width: 100%;
+					margin-top: 15vh;
+					position: relative;
+
+					&::before {
+						content: '';
+						height: 2px;
+						background: #fff;
+						position: absolute;
+						bottom: 0;
+						left: 0%;
+						width: 0%;
+						transition: 0.5s 0s;
+					}
+
+					ul {
+						width: calc(100% / 8 * 2);
+						height: 40px;
+						display: flex;
+						position: absolute;
+						right: calc(100% / 8);
+						bottom: 0;
+
+						li {
+							width: 50%;
+							height: 100%;
+							display: flex;
+							align-items: center;
+							font: bold 12px/1 'arial';
+							color: #fff;
+							padding-left: 5px;
+							overflow: hidden;
+
+							span {
+								display: inline-block;
+								transform: translateX(-110%);
+								transition-duration: 0.5s;
+								transition-delay: 0s;
+							}
+						}
+					}
+
+					button {
+						width: calc(100% / 8);
+						height: 0px;
+						background: #fff;
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						border: none;
+						font: bold 10px/1 'arial';
+						color: #555;
+						cursor: pointer;
+						overflow: hidden;
+						transition: 0.5s 0s;
+					}
+				}
 			}
 		}
 
@@ -111,6 +170,27 @@ figure {
 				p {
 					transform: translateX(0%);
 					transition: 1s 1.2s;
+				}
+				.bar {
+					&::before {
+						width: 100%;
+						transition: 1s 2s;
+					}
+					ul li {
+						span {
+							transform: translateX(0%);
+						}
+						&:nth-of-type(1) span {
+							transition-delay: 3.2s;
+						}
+						&:nth-of-type(2) span {
+							transition-delay: 3.6s;
+						}
+					}
+					button {
+						height: 40px;
+						transition: 0.5s 3s;
+					}
 				}
 			}
 		}

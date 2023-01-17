@@ -101,6 +101,59 @@ figure .frame article .txt p {
   transform: translateX(-100%);
   transition: 0.5s 0s;
 }
+figure .frame article .txt .bar {
+  width: 100%;
+  margin-top: 15vh;
+  position: relative;
+}
+figure .frame article .txt .bar::before {
+  content: "";
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 0%;
+  transition: 0.5s 0s;
+}
+figure .frame article .txt .bar ul {
+  width: 25%;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  right: 12.5%;
+  bottom: 0;
+}
+figure .frame article .txt .bar ul li {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font: bold 12px/1 "arial";
+  color: #fff;
+  padding-left: 5px;
+  overflow: hidden;
+}
+figure .frame article .txt .bar ul li span {
+  display: inline-block;
+  transform: translateX(-110%);
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+figure .frame article .txt .bar button {
+  width: 12.5%;
+  height: 0px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  font: bold 10px/1 "arial";
+  color: #555;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s 0s;
+}
 figure .frame article.on {
   z-index: 3;
 }
@@ -115,6 +168,23 @@ figure .frame article.on .txt h2 {
 figure .frame article.on .txt p {
   transform: translateX(0%);
   transition: 1s 1.2s;
+}
+figure .frame article.on .txt .bar::before {
+  width: 100%;
+  transition: 1s 2s;
+}
+figure .frame article.on .txt .bar ul li span {
+  transform: translateX(0%);
+}
+figure .frame article.on .txt .bar ul li:nth-of-type(1) span {
+  transition-delay: 3.2s;
+}
+figure .frame article.on .txt .bar ul li:nth-of-type(2) span {
+  transition-delay: 3.6s;
+}
+figure .frame article.on .txt .bar button {
+  height: 40px;
+  transition: 0.5s 3s;
 }
 figure .btns {
   width: 30%;
