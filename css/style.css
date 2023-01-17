@@ -76,12 +76,45 @@ figure .frame article .line > div {
   border-right: 1px solid #fff;
   opacity: 0.2;
 }
+figure .frame article .txt {
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 2;
+}
+figure .frame article .txt h2 {
+  font: bold 6vw/1 "arial";
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateX(-100%);
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s 0s;
+}
+figure .frame article .txt p {
+  width: 40%;
+  font: 16px/1.2 "arial";
+  color: #fff;
+  padding: 10px;
+  opacity: 0.7;
+  transform: translateX(-100%);
+  transition: 0.5s 0s;
+}
 figure .frame article.on {
   z-index: 3;
 }
 figure .frame article.on .bg > div {
   top: 0%;
   opacity: 1;
+}
+figure .frame article.on .txt h2 {
+  transform: translateX(0%);
+  transition: 1s 0.5s;
+}
+figure .frame article.on .txt p {
+  transform: translateX(0%);
+  transition: 1s 1.2s;
 }
 figure .btns {
   width: 30%;
