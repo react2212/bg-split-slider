@@ -1,10 +1,26 @@
 const frame = document.querySelector('.frame');
 const bgs = frame.querySelectorAll('.bg');
 const lines = frame.querySelectorAll('.line');
+const btns = document.querySelectorAll('.btns span');
+const boxs = frame.querySelectorAll('article');
 const num = 10;
+const changeDelay = 500;
 
 insertDivs(0.05);
 insertLine();
+
+setTimeout(() => boxs[0].classList.add('on'), changeDelay);
+
+btns.forEach((btn, idx) => {
+	btn.addEventListener('click', (e) => {
+		e.preventDefault();
+		for (const el of btns) el.classList.remove('on');
+		for (const el of boxs) el.classList.remove('on');
+
+		btns[idx].classList.add('on');
+		setTimeout(() => boxs[idx].classList.add('on'), changeDelay);
+	});
+});
 
 function insertDivs(interval) {
 	bgs.forEach((bg) => {
